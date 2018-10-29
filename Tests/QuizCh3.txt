@@ -1,0 +1,12 @@
+//Hassan Farooq
+//APCS P.5
+//October 9 2018
+//Quiz Ch3
+//
+//Returns the surface area of a cylinder of given radius and height
+
+public static double cylinderSA(double radius, double height) {
+	//Formula: (2*pi*r)(r+h)
+	double SA = (2 * Math.PI * radius) * (radius + height);	
+	return SA;
+}

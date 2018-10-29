@@ -1,0 +1,16 @@
+//Hassan Farooq 
+//APCS P.5
+//October 2, 2018
+//
+//Quiz Ch2 (For Loops)
+//Prints a certain amount of multiples of a given number
+
+public static void printMultiples() {
+	int base = 3;
+	int num = 5;
+	
+	System.out.print("The first " + num + " multiples of " + base + " are");
+
+	for(int multiples = 1; multiples <= num; multiples++)
+		System.out.print(" " + (multiples * base));
+}

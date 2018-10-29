@@ -1,0 +1,17 @@
+//Hassan Farooq
+//APCS P.5
+//October 25, 2018
+//Quiz Ch4
+//
+//Returns sum of every integer between 0 and num evenly divisible by multiple1 or multiple2
+
+public static int sumMultiples(int num, int multiple1, int multiple2) {
+	int sum = 0;
+	
+	for(int currentNum = 1; i <= num; currentNum++) {
+		if(currentNum % multiple1 == 0 || currentNum % multiple2 == 0)
+			sum += currentNum;
+	}
+	
+	return sum;
+}

@@ -1,0 +1,36 @@
+//Hassan Farooq
+//APCS P.5
+//Quiz Ch1 free response
+//9-19-2018
+//
+
+public class Figure {
+	public static void main (String[] args) {
+		topTri();
+		
+		sLine();
+		sLine();
+		
+		bottomTri();
+		bottomTri();
+
+		topTri();
+	}
+
+	public static void topTri() {
+		System.out.println("*****");
+		System.out.println(" \"\"\"");
+		System.out.println("  *");
+	}
+
+	public static void bottomTri() {
+		System.out.println("  *");
+		System.out.println(" \"\"\"");
+		System.out.println("*****");
+		sLine();
+	}
+
+	public static void sLine() {
+		System.out.println("~~~~~");
+	}
+}
