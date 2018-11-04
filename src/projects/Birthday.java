@@ -12,9 +12,7 @@ import java.util.Scanner;
 public class Birthday {
 	
 	public static void main(String[] args) {
-		//Header
-		System.out.println("This program tells you how many days");
-		System.out.println("it will be until your next birthday.\n");
+		System.out.println("This program tells you how many days\nit will be until your next birthday.\n");
 		
 		//Gets today's date + birthday date
 		int today = getDateInput("today's date");
@@ -37,7 +35,7 @@ public class Birthday {
 		int daysInMonth = daysInMonth(month);
 		
 		//Day
-		System.out.printf("What is the day   (1-%d)? ", daysInMonth);
+		System.out.printf("What is the date  (1-%d)? ", daysInMonth);
 		int day = console.nextInt();
 		
 		//Day of year
@@ -47,33 +45,34 @@ public class Birthday {
 		return numberOfDays;
 	}
 	
+	//Calculates the day of the year for a given date
+	public static int numberOfDays(int inMonth, int gDay) {
+		int totalDays = gDay;
+		
+		for(int months = 1; months < inMonth; months++)
+			totalDays += daysInMonth(months);
+		
+		return totalDays;
+	}
+
 	//Determines the amount of days in a month
 	public static int daysInMonth(int months) {
-		int daysInMonth = 0;
+		int totalDays = 0;
 		if(months == 2)
-			daysInMonth = 28;
+			totalDays = 28;
 		else if(months == 4 || months == 6 || months == 9 || months == 11)
-			daysInMonth = 30;
+			totalDays = 30;
 		else
-			daysInMonth = 31;
+			totalDays = 31;
 		
-		return daysInMonth;
-	}
-	
-	//Calculates the day of the year for a given date
-	public static int numberOfDays(int inMonth, int inDay) {		
-		for(int months = 1; months < inMonth; months++)
-			inDay += daysInMonth(months);
-		
-		return inDay;
+		return totalDays;
 	}
 	
 	//Figures out which string to print based on days left
 	public static void daysForBirthday(int today, int birthday) {
 		//Determines days left until birthday
 		int days = birthday - today;
-		
-		//If the birthday already occurred this year
+		//If birthday already occurred this year, figure out days until the next one
 		if(days < 0)
 			days += 365;
 		
