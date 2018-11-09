@@ -1,0 +1,21 @@
+//Hassan Farooq P.5
+//November 6, 2018
+//Quiz Ch. 5
+//
+
+//This method simulates a person in Monopoly jail
+public static void jailTurns() {	
+	int randNum1 = (int)(Math.random() * 6) + 1; //Dice 1
+	int randNum2 = (int)(Math.random() * 6) + 1; //Dice 2
+	int trys = 1; //Total attempts
+
+	//Keep trying until the two "dice" have the same value
+	while(randNum1 != randNum2) {
+		randNum1 = (int)(Math.random() * 6) + 1;
+		randNum2 = (int)(Math.random() * 6) + 1;
+		trys++;
+	}
+
+	System.out.printf("You have exited jail after %d rolls. ", trys);
+	System.out.printf("Your final roll was %d and %d", randNum1, randNum2);
+}
