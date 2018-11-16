@@ -1,0 +1,23 @@
+You asked for the record at rank 15
+	Rank: 15
+	Rating: 8.7
+	Votes: 133249
+	Title: Goodfellas
+	Year: 1990
+You asked for the movie title at rank 12
+	Title: Star Wars
+You asked for the amount of movies from 1994
+	Number of movies: 6
+You asked for all moves which scored between 8.8 and 10.0
+	The Godfather
+	The Shawshank Redemption
+	The Godfather: Part II
+	Buono, il brutto, il cattivo, Il
+	Pulp Fiction
+	Schindler's List
+	Star Wars: Episode V - The Empire Strikes Back
+	One Flew Over the Cuckoo's Nest
+	Casablanca
+	The Lord of the Rings: The Return of the King
+	Shichinin no samurai
+	Star Wars
