@@ -1,0 +1,31 @@
+//Hassan Farooq
+//APCS P.5
+//November 19, 2018
+//Quiz Ch6
+//
+//S-Mart free response
+
+import java.io.*;
+import java.util.Scanner;
+
+public class Grocery {
+	public static void main(String[] args) throws FileNotFoundException {
+		File input = new File("groceryList.txt");
+		File output = new File("newList.txt");
+		
+		Scanner inputScan = new Scanner(input);
+		PrintStream outStream = new PrintStream(output);
+		
+		while(inputScan.hasNextLine()) {
+			String nextWord = inputScan.nextLine();
+			
+			if(nextWord.charAt(0) == 'S') {
+				System.out.println("-" + nextWord + "-");
+				outStream.println("-" + nextWord + "-");
+			} else {
+				System.out.println(nextWord);
+				outStream.println(nextWord);
+			}
+		}
+	}
+}

@@ -1,16 +1,63 @@
-You asked for the record at rank 15
-	Rank: 15
-	Rating: 8.7
-	Votes: 133249
-	Title: Goodfellas
-	Year: 1990
-You asked for the movie title at rank 12
-	Title: Star Wars
-You asked for the amount of movies from 1994
-	Number of movies: 6
-You asked for all moves which scored between 8.8 and 10.0
-	The Godfather
-	The Shawshank Redemption
+You asked for the ranking of Monty Python and the Holy Grail
+	Ranking: 53
+		 - Greatest Comedy of All Time
+
+You asked for the record at rank 53
+	53 8.4 104225 Monty Python and the Holy Grail (1975)
+		 - Greatest Comedy of All Time
+
+You asked for all moves which scored between 8.3 and 8.4
+	Paths of Glory
+	Chinatown
+	To Kill a Mockingbird
+	M
+	Eternal Sunshine of the Spotless Mind
+	Laberinto del fauno, El
+	The Third Man
+	A Clockwork Orange
+	The Treasure of the Sierra Madre
+	Alien
+	The Pianist
+	Monty Python and the Holy Grail
+		 - Greatest Comedy of All Time
+	The Shining
+	L.A. Confidential
+	Double Indemnity
+	Sen to Chihiro no kamikakushi
+	The Bridge on the River Kwai
+	Untergang, Der
+	Leben der Anderen, Das
+	Boot, Das
+	The Maltese Falcon
+	Saving Private Ryan
+	Reservoir Dogs
+	Requiem for a Dream
+	Metropolis
+	Aliens
+	Forrest Gump
+	Raging Bull
+	Rashomon
+	Singin' in the Rain
+	Sin City
+	Hotel Rwanda
+	Rebecca
+	Terminator 2: Judgment Day
+	Modern Times
+	All About Eve
+	Some Like It Hot
+	2001: A Space Odyssey
+	The Great Escape
+	Amadeus
+	Sjunde inseglet, Det
+	On the Waterfront
+	Touch of Evil
+	The Elephant Man
+	The Manchurian Candidate
+	The Prestige
+	Jaws
+	Ratatouille
+
+You asked for all moves which scored between 8.8 and 9.0
 	The Godfather: Part II
 	Buono, il brutto, il cattivo, Il
 	Pulp Fiction
@@ -21,3 +68,23 @@ You asked for all moves which scored between 8.8 and 10.0
 	The Lord of the Rings: The Return of the King
 	Shichinin no samurai
 	Star Wars
+
+You asked for the record at rank 153
+	153 8.1 7581 Judgment at Nuremberg (1961)
+
+You asked for the movie title at rank 215
+	Title: Lock, Stock and Two Smoking Barrels
+
+You asked for the amount of movies from 1975
+	Number of movies: 4
+
+You asked for the ranking of Double Indemnity
+	Ranking: 56
+
+You asked for the amount of movies from 1967
+	Number of movies: 5
+
+You asked for the movie title at rank 53
+	Title: Monty Python and the Holy Grail
+		 - Greatest Comedy of All Time
+
