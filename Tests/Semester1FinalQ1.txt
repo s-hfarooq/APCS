@@ -1,0 +1,20 @@
+//Hassan Farooq 
+//APCS P.5
+//January 25, 2019
+//
+//Semester 1 Final Free Response Question 1
+
+public static void printShortWords(String str, int maxLength) {	
+	//While another words exists in the string, continue	
+	while(str.length() > 0) {
+		int indexOfSpace = str.indexOf(" ");
+		String temp = str.substring(0, indexOfSpace);
+
+		//Only print if the word is shorter than/equal to maxLength
+		if(temp.length() <= maxLength)
+			System.out.println(temp);
+
+		//Remove the word just scanned from str (add 1 otherwise the following space will be included)
+		str = str.substring(indexOfSpace + 1);
+	}
+}

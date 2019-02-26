@@ -1,0 +1,61 @@
+//Hassan Farooq 
+//APCS P.5
+//January 25, 2019
+//
+//Semester 1 Final Free Response Question 3
+
+
+//Pt. A
+public boolean charge(double amount) {
+	boolean isMade = false;
+
+	double newBalance = amount + curBalance;
+
+	if(newBalance > getCreditLimit()) {
+		curBalance += 30;
+	} else {
+		curBalance = newBalance;
+		isMade = true;
+	}
+
+	return isMade;
+}
+
+//Pt. B
+public boolean makePayment(double amount) {
+	boolean isMade = false;
+
+	double minPayment = 0.05 * curBalance;
+
+	if(amount < minPayment) {
+		curBalance += 25;
+	} else {
+		curBalance -= amount;
+		isMade = true;
+	}
+
+	return isMade;
+}
+
+//Pt. C
+public class PlatinumCreditCard extends CreditCard {
+	private int creditScore;
+
+	public PlatinumCreditCard(double initialBalance, int newCreditScore) {
+		super(initialBalance + 100);
+		creditScore = newCreditScore;
+	}
+
+	@Override
+	public double gedCreditLimit() {
+		//Defaults to limit for credit < 800 and balance < 100000
+		double limit = super.getCreditLimit();
+		
+		if(getBalance() > 100000)
+			limit = 0;
+		else if(creditScore >= 800)
+			limit *= 2;
+
+		return limit;
+	}
+}

@@ -1,0 +1,44 @@
+//Hassan Farooq 
+//APCS P.5
+//January 11, 2019
+//
+//Ch8/9 Superhero class free response
+
+
+public class Superhero extends Person {
+	private boolean costume;
+	private int crimesFought;
+
+	//Constructor
+	public Superhero(String newName, boolean isInCostume) {
+		super(newName);
+		
+		costume = isInCostume;
+		crimesFought = 0;
+	}
+	
+	//Determines if the superhero also needs to fight a crime (if in costume)
+	public void normalDay() {
+		if(costume)
+			fightCrime();
+		super.normalDay();
+	}
+	
+	//Helper method for superhero normalDay() incase something else needs to occur during the fighting
+	private void fightCrime() {
+		crimesFought++;
+	}
+
+	//Accessors
+	public boolean isInCostume {
+		return costume;
+	}
+
+	public int getCrimesFought() {
+		return crimesFought;
+	}
+
+	public String toString() {
+		return "Crimes fought: " + crimesFought + ", currently in costume: " + costume;
+	}
+}

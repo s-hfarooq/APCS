@@ -1,0 +1,34 @@
+//Hassan Farooq
+//APCS P.5
+//Quiz Ch7
+//December 6, 2018
+//
+//mean and standardDeviation methods
+
+//Part A - returns mean of the doubles in data
+public static double mean(double[] data) {
+	double meanVal = 0.0;
+
+	for(int i = 0; i < data.length; i++)
+		meanVal += data[i];
+
+	meanVal /= data.length;
+
+	return meanVal;
+}
+
+//Part B - returns standard deviation of the doubles in data
+public static double standardDeviation(double[] data) {
+	double mean = mean(data);
+	double stdDev = 0.0;
+	
+	for(int i = 0; i < data.length; i++) {
+		data[i] -= mean;
+		data[i] = Math.pow(data[i], 2);
+		stdDev += data[i];
+	}
+
+	stdDev /= data.length - 1;
+
+	return stdDev;
+}

@@ -1,0 +1,168 @@
+//Hassan Farooq 
+//APCS P.5
+//February 19, 2019
+//
+//2D Matricies free response
+
+
+public class MagicSquare {
+
+	private int[][] matrix;
+
+	//Constructors
+	public MagicSquare (int size) {
+		matrix = new int[size][size];
+
+		for(int i = 0; i < size; i++) {
+			for(int j = 0; j < size; j++)
+				matrix[i][j] = (int)(Math.random() * 10) + 1;
+		}
+	}
+
+	public MagicSquare (int[][] newMatrix){
+		matrix = new int[newMatrix.length][newMatrix[0].length];
+
+		
+
+		for(int i = 0; i < newMatrix.length; i++) {
+			for(int j = 0; j < newMatrix[i].length; j++)
+				matrix[i][j] = newMatrix[i][j];
+		}
+	}
+
+	//Checks if it is a magic square
+	public boolean isMagic() {
+		//Square check
+		boolean isMagic = isSquare();
+
+		//if(isMagic)
+		//	isMagic = isValidNumbers();
+
+		//First sum value, used to compare with other sums
+		int len = 0;
+		
+		//Columns check		
+		if(isMagic) {
+			for(int i = 0; i < matrix[i].length; i++) {
+				int tempLen = sumCol(i);
+			
+				if(i == 0)
+					len = tempLen;
+				else if(tempLen != len)
+					isMagic = false;
+			}	
+		}
+
+		//Rows check
+		if(isMagic) {
+			for(int i = 0; i < matrix.length; i++) {
+				int tempLen = sumRow(i);
+			
+				if(tempLen != len)
+					isMagic = false;
+			}
+		}
+
+		//Major diagonal check
+		if(isMagic) {
+			if(sumMajorDiag() != len)
+				isMagic = false;
+		}
+
+		//Minor diagonal check
+		if(isMagic) {
+			if(sumMinorDiag() != len)
+				isMagic = false;
+		}
+
+		return isMagic;
+	}
+
+	//Helper methods
+	public boolean isSquare() {
+		boolean isSquare = false;
+
+		if(matrix.length == matrix[0].length)
+			isSquare = true;
+
+		return isSquare;
+	}
+
+	public int sumCol(int col) {
+		int total = 0;
+
+		for(int i = 0; i < matrix.length; i++) {
+			total += matrix[i][col];
+
+		return total;
+	}
+
+	public int sumRow(int row) {
+		int total = 0;
+
+		for(int i = 0; i < matrix[0].length; i++)
+			total += matrix[row][i];
+
+		return total;
+	}
+
+	public int sumMajorDiag() {
+		int total = 0;
+
+		//Assumes matrix is a square; safe since it's only run after that check returns true
+		for(int i = 0; i < matrix.length; i++)
+				total += matrix[i][i];
+
+		return total;
+	}
+
+	public int sumMinorDiag() {
+		int total = 0;
+
+		for(int i = 0; i < matrix.length; i++) {
+			for(int j = matrix[i].length; j > 0; j--)
+				total += matrix[i][j];
+
+		return total;
+	}
+
+	public boolean isValidNumbers() {
+		boolean isValid = true;
+		int maxVal = Math.pow(matrix.length, 2);
+
+		//Array to keep track of values seen
+		int[] values = new int[maxVal];
+
+		for(int i = 0; i < values.length; i++)
+			values[i] = i + 1;
+		
+		int i = 0;
+
+		//Loop through the array until an element doesn't belong (then return false)
+		//Check that the number is valid (1-n^2) and that it hasn't repeated (check values array to make sure 2nd value is 0, set to 1 once encountered)
+		while(isValid && i < matrix.length) {
+			int j = 0;
+
+			while(isValid && j < matrix[i].length) {
+				if(matrix[i][j] > maxVal)
+					isValid = false;
+				else if(values[matrix[i][j] - 1] == 1)
+					isValid = false;
+				else
+					values[matrix[i][j] - 1] = 1;
+				
+				j++;
+			}
+
+			i++;
+		}
+
+		//Check to make sure all numbers possible were seen
+		for(int i = 0; i < values.length; i++) {
+			if(values[i] == 0)
+				isValid = false;
+		}
+
+		return isValid;
+	}
+}

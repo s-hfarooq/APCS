@@ -1,0 +1,42 @@
+//Hassan Farooq 
+//APCS P.5
+//January 25, 2019
+//
+//Semester 1 Final Free Response Question 2
+
+import java.io.*;
+import java.util.Scanner;
+
+public class FileReaderWriter {
+	public static void main(String[] args) throws FileNotFoundException {
+		//Set up files
+		File input = new File("InputFile.txt");
+		Scanner scn = new Scanner(input);
+
+		File output = new File("OutputFile.txt");
+		PrintStream ps = new PrintStream(output);
+
+		int lines = 0, words = 0;
+		
+		//While the file has another line, continue
+		while(scn.hasNextLine()) {
+			lines++;
+
+			String line = scn.nextLine();
+			Scanner lnScn = new Scanner(line);
+
+			//While the line has another word, continue
+			while(lnScn.hasNext()) {
+				words++;				
+				lnScn.next();
+			}
+		}
+
+		//Print to console/file
+		System.out.println("Lines: " + lines);
+		System.out.println("Words: " + words);
+
+		ps.println("Lines: " + lines):
+		ps.println("Words: " + words):
+	}
+}
