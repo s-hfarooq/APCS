@@ -1,12 +1,13 @@
-//Hassan Farooq P.5
-//February 26, 2019
-//CourseFinder project
-//Course
+// Hassan Farooq P.5
+// February 26, 2019
+// CourseFinder project
+// Course
 //
 
 import java.util.ArrayList;
 
 public class Course {
+	
 	private String name;
 	private int minStudents;
 	private int maxStudents;
@@ -26,6 +27,7 @@ public class Course {
 		students.add(newStudent);
 	}
 	
+	// Drops student from students ArrayList
 	public void dropStudent(Student newStudent) {
 		int index = 0;
 		String studentName = newStudent.getName();
@@ -38,12 +40,18 @@ public class Course {
 		students.remove(index);
 	}
 	
-	public void removeRandomStudent() {
+	public void lockClass() {
+		isLocked = true;
+	}
+	
+	public Student removeRandomStudent() {
 		int rand = (int)(Math.random() * students.size());
 		Student randStudent = students.get(rand);
 		
 		randStudent.dropCourse(this);
 		dropStudent(randStudent);
+		
+		return randStudent;
 	}
 	
 	public boolean isTooFull() {
@@ -64,6 +72,14 @@ public class Course {
 		return notEnough;
 	}
 	
+	public int amntOverload() {
+		return students.size() - maxStudents;
+	}
+	
+	public Student getStudent(int index) {
+		return students.get(index);
+	}
+	
 	public boolean isLocked() {
 		return isLocked;
 	}
@@ -72,11 +88,20 @@ public class Course {
 		return name;
 	}
 	
+	public int getStudentAmnt() {
+		return students.size();
+	}
+	
 	public String toString() {
-		String output = name;
+		String output = name + ": ";
 		
-		for(int i = 0; i < students.size(); i++)
-			output += students.get(i) + " ";
+		if(students.size() == 0) {
+			output += "no students";
+		} else {
+			for(int i = 0; i < students.size() - 1; i++)
+				output += students.get(i) + ", ";
+			output += students.get(students.size() - 1);
+		}
 		
 		return output;
 	}

@@ -1,0 +1,32 @@
+CLASS ROSTERS:
+APCS: Kai, Nour, Max, Parth, Mehak, Shruthi, Daniel, Rosi, Ronya, Aleks, Mathilda, Brooklyn, Rachel, Rohan, Annalice
+Calculus: Aliya, Alex, Carson, Kyler, Nour, Max, Mehak, Shruthi, Daniel, Rosi, Aleks, Brooklyn, Rachel, Rohan, Annalice
+Statistics: Harshini, John, Alex, Misha, Carson, Elizabeth, Donna, Mathilda, Ronya, Mehak, Rosi, Sebastian, Aleks, Brooklyn, Rohan
+US_History: Harshini, Donna, Koyo, Elizabeth, Aliya, Alex, Max, Misha, Parth, Shruthi, Ronya, Kyler, Brooklyn, Rohan, Annalice
+World_History: Koyo, Elizabeth, Donna, Daniel, Carson, Max, John, Kiswa, Nour, Misha, Rosi, Ronya, Kyler, Mathilda, Rohan
+Photography: Sebastian, Koyo, Kai, Aliya, Alex, Harshini, Parth, Daniel, Carson, Elizabeth, Brooklyn, Rachel, Mehak, Aleks, Shruthi
+French: no students
+Mandarin: no students
+Physics: Kai, Elizabeth, Sebastian, Misha, Donna, John, Aliya, Alex, Parth, Ronya, Mathilda, Carson, Max, Nour, Shruthi
+Drawing: Kavya, Eric, Koyo, Donna, Annalice, Kiswa, Kai
+Spanish: no students
+Crayons: no students
+Chemistry: Misha, Harshini, Parth, Kyler, John, Kai, Nour, Mehak, Daniel, Rosi, Aleks, Mathilda, Rachel, Carson, Annalice
+Biology: Harshini, Aliya, Misha, Kyler, Elizabeth, Ronya, Rohan, Brooklyn, Shruthi, John, Mehak, Rosi, Aleks, Mathilda, Rachel
+Painting: Eric, Koyo, Donna, Aliya, Harshini, Parth, Alex, Max, Annalice, Kai, John, Nour, Daniel, Rachel
+PlayDoh: no students
+AP_Chemistry: no students
+AP_Biology: no students
+Pakistani_History: no students
+Film_Editing: no students
+Art: no students
+Urdu: no students
+Korean: no students
+Competitive_Pokemon: no students
+Hardcore_Parkour: no students
+Pottery: no students
+Rapping: no students
+Mime_Sciences: no students
+Professional_Faking: no students
+Melee: no students
+Free_Period: no students

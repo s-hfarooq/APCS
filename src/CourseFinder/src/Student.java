@@ -1,13 +1,13 @@
-//Hassan Farooq P.5
-//February 26, 2019
-//CourseFinder project
-//Student
+// Hassan Farooq P.5
+// February 26, 2019
+// CourseFinder project
+// Student
 //
 
 import java.util.ArrayList;
 
 public class Student {
-
+	
 	private String name;
 	private ArrayList<Course> prefList;
 	private ArrayList<Course> actualCourses;
@@ -16,10 +16,7 @@ public class Student {
 		name = newName;
 		
 		prefList = new ArrayList<Course>();
-	}
-	
-	public String getName() {
-		return name;
+		actualCourses = new ArrayList<Course>();
 	}
 	
 	public void addPreferredCourse(Course newCourse) {
@@ -30,8 +27,12 @@ public class Student {
 		System.out.println(prefList);
 	}
 	
-	public Course getNextPref() {
-		return prefList.remove(0);
+	public void removeNextPref() {
+		prefList.remove(0);
+	}
+	
+	public boolean hasAnotherPref() {
+		return prefList.size() != 0 ? true : false; 
 	}
 	
 	public void addCourse(Course newCourse) {
@@ -39,11 +40,12 @@ public class Student {
 		newCourse.addStudent(this);
 	}
 	
+	// Removes course from student's actualCourses ArrayList
 	public void dropCourse(Course newCourse) {
 		int index = 0;
 		String courseName = newCourse.getName();
 		
-		for(int i = 0; i < actualCourses.size(); i ++) {
+		for(int i = 0; i < actualCourses.size(); i++) {
 			if(actualCourses.get(i).getName().equals(courseName))
 				index = i;
 		}
@@ -60,6 +62,25 @@ public class Student {
 			isDone = true;
 		
 		return isDone;
+	}
+	
+	public String getFinalCourses() {
+		String output = name + ": ";
+		
+		for(int i = 0; i < actualCourses.size() - 1; i++) 
+			output += actualCourses.get(i).getName() + ", ";
+		
+		output += actualCourses.get(actualCourses.size() - 1).getName();
+		
+		return output;
+	}
+	
+	public Course getNextPref() {
+		return prefList.remove(0);
+	}
+	
+	public String getName() {
+		return name;
 	}
 	
 	public String toString() {

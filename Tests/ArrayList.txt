@@ -1,0 +1,40 @@
+//Hassan Farooq
+//APCS P.5
+//March 4, 2019
+//Quiz ArrayLists
+//
+//SpellingBee
+
+public class SpellingBee {
+	private ArrayList<String> words;
+	private int next;
+	
+	public SpellingBee(ArrayList<String> newWords) {
+		next = 0;
+		
+		words = new ArrayList<String>();
+		
+		for(int i = 0; i < newWords.size(); i++)
+			words.add(newWords.get(i));
+	}
+	
+	public String nextWord() {
+		String output = "";
+		
+		if(next > words.size() - 1) {
+			output = "end of list";
+		} else {
+			output = words.get(next);
+			next++;
+		}
+		
+		return output;
+	}
+	
+	public void shortWords(int maxLen) {
+		for(int i = words.size() - 1; i >= 0; i--) {
+			if(words.get(i).length() > maxLen)
+				words.remove(i);
+		}
+	}
+}

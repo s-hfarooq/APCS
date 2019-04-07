@@ -1,0 +1,30 @@
+STUDENT CLASS LISTS:
+Kavya: Drawing
+John: Statistics, Physics, Chemistry, Biology, World_History, Painting
+Kiswa: World_History, Drawing
+Kai: APCS, Physics, Chemistry, Photography, Painting, Drawing
+Aliya: Calculus, Physics, Biology, US_History, Photography, Painting
+Nour: APCS, Calculus, Physics, Chemistry, World_History, Painting
+Alex: Calculus, Statistics, Physics, US_History, Photography, Painting
+Eric: Painting, Drawing
+Max: APCS, Calculus, Physics, US_History, World_History, Painting
+Misha: Statistics, Physics, Chemistry, Biology, US_History, World_History
+Harshini: Statistics, Biology, Chemistry, US_History, Photography, Painting
+Parth: APCS, Physics, Chemistry, US_History, Photography, Painting
+Mehak: APCS, Calculus, Statistics, Chemistry, Biology, Photography
+Shruthi: APCS, Calculus, Physics, Biology, US_History, Photography
+Daniel: APCS, Calculus, Chemistry, World_History, Photography, Painting
+Rosi: APCS, Calculus, Statistics, Chemistry, Biology, World_History
+Ronya: APCS, Statistics, Physics, Biology, US_History, World_History
+Sebastian: Physics, Statistics, Photography
+Kyler: Calculus, Chemistry, Biology, US_History, World_History
+Aleks: APCS, Calculus, Statistics, Chemistry, Biology, Photography
+Mathilda: APCS, Statistics, Physics, Chemistry, Biology, World_History
+Koyo: Painting, Photography, US_History, World_History, Drawing
+Brooklyn: APCS, Calculus, Statistics, Biology, US_History, Photography
+Rachel: APCS, Calculus, Chemistry, Biology, Photography, Painting
+Rohan: APCS, Calculus, Statistics, Biology, US_History, World_History
+Carson: Calculus, Statistics, Physics, Chemistry, World_History, Photography
+Annalice: APCS, Calculus, Chemistry, US_History, Painting, Drawing
+Elizabeth: Statistics, Physics, Biology, US_History, World_History, Photography
+Donna: Statistics, Physics, US_History, World_History, Painting, Drawing

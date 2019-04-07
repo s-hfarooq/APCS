@@ -1,0 +1,44 @@
+// Hassan Farooq P.5
+// Quiz: Search and Sort Free Response
+// April 5, 2019
+//
+
+
+public class SearchableArray {
+	private int[] arr;
+	private int linSearchTimes;
+	private int currSearchAmnt;
+	private boolean isSorted;
+
+	public SearchableArray(int[] newArr, int n) {
+		arr = new int[newArr.length];
+		for(int i = 0; i < newArr.length; i++)
+			arr[i] = newArr[i];
+
+		linSearchTimes = n;
+
+		currSearchAmnt = 0;
+		isSorted = false;
+	}
+
+	public int search(int num) {
+		int index = -1;
+
+		if(currSearchAmnt <= linSearchTimes) {
+			// Linear search
+			index = ArrayHelper.linearSearch(arr, num);
+		} else {
+			// Sort if it hasn't already been sorted then do a binary search
+			if(!isSorted) {
+				ArrayHelper.sort(arr);
+				isSorted = true;
+			}
+
+			index = ArrayHelper.binarySearch(arr, num);			
+		}
+
+		currSearchAmnt++;
+
+		return index;
+	}
+}
